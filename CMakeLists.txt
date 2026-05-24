@@ -24,6 +24,14 @@ add_executable(TransitTycoon
         include/core/WeatherSystem.cpp
         include/transport/TransportMode.h
         include/transport/TransportMode.cpp
+        include/transport/Metro.h
+        include/transport/Metro.cpp
+        include/transport/Tram.h
+        include/transport/Tram.cpp
+        include/transport/Bus.h
+        include/transport/Bus.cpp
+        include/transport/Walking.h
+        include/transport/Walking.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
