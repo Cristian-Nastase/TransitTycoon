@@ -40,6 +40,24 @@ add_executable(TransitTycoon
         src/patterns/CheapestStrategy.cpp
         include/people/PersonFactory.h
         src/people/PersonFactory.cpp
+        include/upgrades/Upgrade.h
+        src/upgrades/Upgrade.cpp
+        include/upgrades/UmbrellaUpgrade.h
+        src/upgrades/UmbrellaUpgrade.cpp
+        include/upgrades/CapacityUpgrade.h
+        src/upgrades/CapacityUpgrade.cpp
+        include/upgrades/HappinessUpgrade.h
+        src/upgrades/HappinessUpgrade.cpp
+        include/upgrades/DiscountUpgrade.h
+        src/upgrades/DiscountUpgrade.cpp
+        include/upgrades/UpgradeFactory.h
+        src/upgrades/UpgradeFactory.cpp
+        include/core/RoundResult.h
+        src/core/RoundResult.cpp
+        include/core/Game.h
+        src/core/Game.cpp
+        include/ui/ConsoleUI.h
+        src/ui/ConsoleUI.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)

@@ -1,21 +1,40 @@
-#include <iostream>
+#include "core/Game.h"
+#include "ui/ConsoleUI.h"
 #include "exceptions/GameExceptions.h"
-#include "core/RandomGenerator.h"
-#include "core/ConfigLoader.h"
-#include "core/WeatherSystem.h"
-#include "patterns/IObserver.h"
-#include "patterns/ISubject.h"
-#include "people/PersonFactory.h"
+#include "templates/Repository.h"
+
+#include <iostream>
+
+void demonstrateTemplates() {
+    // Demonstrăm template-ul cu tipuri diferite (cerință explicită)
+    std::cout << "\n--- Demonstratie template Repository ---\n";
+
+    Repository<int> nums;
+    nums.add(10);
+    nums.add(20);
+    nums.add(30);
+    printRepository(nums, "Numere");
+
+    Repository<std::string> words;
+    words.add("hello");
+    words.add("world");
+    printRepository(words, "Cuvinte");
+
+    auto evens = countMatching(nums, [](int n) { return n % 2 == 0; });
+    std::cout << "Pare in lista numere: " << evens << "\n\n";
+}
 
 int main() {
-    std::vector<std::shared_ptr<Person>> people;
-    people.reserve(100);
+    try {
+        demonstrateTemplates();
 
-    for (int i = 0; i < 100; ++i) {
-        people.push_back(PersonFactory::createRandom(i));
-        std::cout<<*people[i]<<'\n';
+        Game game("data/config.txt", "data/upgrades.txt");
+        ConsoleUI ui(game);
+        ui.run();
+
+    } catch (const std::exception& e) {
+        std::cerr << "[Eroare fatala] " << e.what() << "\n";
+        return 1;
     }
-
-    std::cout << "Transport Tycoon - start\n";
     return 0;
 }
