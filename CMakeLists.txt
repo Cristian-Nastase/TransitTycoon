@@ -13,6 +13,7 @@ find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
 add_executable(TransitTycoon
         src/main.cpp
+        include/exceptions/GameExceptions.h
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
