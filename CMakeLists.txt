@@ -9,39 +9,37 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
-
 add_executable(TransitTycoon
         src/main.cpp
         include/exceptions/GameExceptions.h
         include/core/RandomGenerator.h
-        include/core/RandomGenerator.cpp
+        src/core/RandomGenerator.cpp
         include/core/ConfigLoader.h
-        include/core/ConfigLoader.cpp
+        src/core/ConfigLoader.cpp
         include/patterns/IObserver.h
         include/patterns/ISubject.h
         include/core/WeatherSystem.h
-        include/core/WeatherSystem.cpp
+        src/core/WeatherSystem.cpp
         include/transport/TransportMode.h
-        include/transport/TransportMode.cpp
+        src/transport/TransportMode.cpp
         include/transport/Metro.h
-        include/transport/Metro.cpp
+        src/transport/Metro.cpp
         include/transport/Tram.h
-        include/transport/Tram.cpp
+        src/transport/Tram.cpp
         include/transport/Bus.h
-        include/transport/Bus.cpp
+        src/transport/Bus.cpp
         include/transport/Walking.h
-        include/transport/Walking.cpp
+        src/transport/Walking.cpp
         include/templates/Repository.h
         include/patterns/ChoiceStrategy.h
         include/people/Person.h
-        include/people/Person.cpp
+        src/people/Person.cpp
         include/patterns/WeightedRandomStrategy.h
-        include/patterns/WeightedRandomStrategy.cpp
+        src/patterns/WeightedRandomStrategy.cpp
         include/patterns/CheapestStrategy.h
-        include/patterns/CheapestStrategy.cpp
+        src/patterns/CheapestStrategy.cpp
         include/people/PersonFactory.h
-        include/people/PersonFactory.cpp
+        src/people/PersonFactory.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)

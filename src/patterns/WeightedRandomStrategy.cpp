@@ -1,6 +1,6 @@
-#include "patterns/WeightedRandomStrategy.h"
-#include "../people/Person.h"
-#include "../core/RandomGenerator.h"
+#include "../include/patterns/WeightedRandomStrategy.h"
+#include "../include/people/Person.h"
+#include "../include/core/RandomGenerator.h"
 
 int WeightedRandomStrategy::choose(
     const Person& p,
@@ -12,7 +12,7 @@ int WeightedRandomStrategy::choose(
     weights.reserve(options.size());
 
     for (const auto& opt : options) {
-        if (!opt->hasRoom()) {
+        if (!opt->hasRoom() || p.getBudget() < opt->getTicketPrice()) {
             weights.push_back(0.0f);
             continue;
         }

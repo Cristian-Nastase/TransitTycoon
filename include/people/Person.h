@@ -35,6 +35,7 @@ public:
     float getPreference(TransportType t) const;
     int getMood() const { return mood + boost; }
     int getBaseMood() const { return mood; }
+    int getBudget() const { return budget; }
 
     void addBoost(int amount) { boost += amount; }
     void clearBoost() { boost = 0; }

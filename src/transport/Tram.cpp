@@ -1,4 +1,4 @@
-#include "Tram.h"
+#include "../include/transport/Tram.h"
 
 Tram::Tram(int capacity, int price)
     : TransportMode("Tramvai", capacity, price) {}

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "../include/exceptions/GameExceptions.h"
-#include "../include/core/RandomGenerator.h"
-#include "../include/core/ConfigLoader.h"
-#include "../include/core/WeatherSystem.h"
-#include "../include/patterns/IObserver.h"
-#include "../include/patterns/ISubject.h"
-#include "../include/people/PersonFactory.h"
+#include "exceptions/GameExceptions.h"
+#include "core/RandomGenerator.h"
+#include "core/ConfigLoader.h"
+#include "core/WeatherSystem.h"
+#include "patterns/IObserver.h"
+#include "patterns/ISubject.h"
+#include "people/PersonFactory.h"
 
 int main() {
     std::vector<std::shared_ptr<Person>> people;

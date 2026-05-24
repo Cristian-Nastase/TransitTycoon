@@ -1,7 +1,4 @@
-#include "core/RandomGenerator.h"
-
-#pragma once
-
+#include "../include/core/RandomGenerator.h"
 #include <numeric>
 #include <stdexcept>
 

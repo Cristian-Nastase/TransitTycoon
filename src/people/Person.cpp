@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "../include/people/Person.h"
 
 Person::Person(std::string name,
                std::map<TransportType, float> preferences,

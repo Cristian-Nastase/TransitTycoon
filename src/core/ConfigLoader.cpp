@@ -1,5 +1,5 @@
-#include "core/ConfigLoader.h"
-#include "../exceptions/GameExceptions.h"
+#include "../include/core/ConfigLoader.h"
+#include "../include/exceptions/GameExceptions.h"
 
 #include <fstream>
 #include <sstream>

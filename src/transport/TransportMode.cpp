@@ -1,4 +1,4 @@
-#include "TransportMode.h"
+#include "../include/transport/TransportMode.h"
 
 TransportMode::TransportMode(std::string name, int capacity, int ticketPrice)
     : name(std::move(name)),

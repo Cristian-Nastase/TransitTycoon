@@ -1,5 +1,5 @@
-#include "CheapestStrategy.h"
-#include "../people/Person.h"
+#include "../include/patterns/CheapestStrategy.h"
+#include "../include/people/Person.h"
 
 int CheapestStrategy::choose(
     const Person& p,
@@ -9,7 +9,7 @@ int CheapestStrategy::choose(
     int bestPrice = -1;
 
     for (std::size_t i = 0; i < options.size(); ++i) {
-        if (!options[i]->hasRoom()) continue;
+        if (!options[i]->hasRoom() || options[i]->getTicketPrice() > p.getBudget()) continue;
 
         int price = options[i]->getTicketPrice();
         if (bestIdx == -1 || price < bestPrice) {
