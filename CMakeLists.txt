@@ -32,6 +32,14 @@ add_executable(TransitTycoon
         include/transport/Bus.cpp
         include/transport/Walking.h
         include/transport/Walking.cpp
+        include/templates/Repository.h
+        include/patterns/ChoiceStrategy.h
+        include/people/Person.h
+        include/people/Person.cpp
+        include/patterns/WeightedRandomStrategy.h
+        include/patterns/WeightedRandomStrategy.cpp
+        include/patterns/CheapestStrategy.h
+        include/patterns/CheapestStrategy.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
