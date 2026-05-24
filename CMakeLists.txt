@@ -16,6 +16,12 @@ add_executable(TransitTycoon
         include/exceptions/GameExceptions.h
         include/core/RandomGenerator.h
         include/core/RandomGenerator.cpp
+        include/core/ConfigLoader.h
+        include/core/ConfigLoader.cpp
+        include/patterns/IObserver.h
+        include/patterns/ISubject.h
+        include/core/WeatherSystem.h
+        include/core/WeatherSystem.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
