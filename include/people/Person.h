@@ -14,6 +14,7 @@ class Person {
     std::string name;
     std::map<TransportType, float> preferences;
     int mood;
+    int budget;
     int boost;
     std::unique_ptr<ChoiceStrategy> strategy;
 
@@ -21,6 +22,7 @@ public:
     Person(std::string name,
            std::map<TransportType, float> preferences,
            int mood,
+           int budget,
            std::unique_ptr<ChoiceStrategy> strategy);
 
     Person(const Person&) = delete;

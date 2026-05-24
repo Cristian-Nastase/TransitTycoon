@@ -40,6 +40,8 @@ add_executable(TransitTycoon
         include/patterns/WeightedRandomStrategy.cpp
         include/patterns/CheapestStrategy.h
         include/patterns/CheapestStrategy.cpp
+        include/people/PersonFactory.h
+        include/people/PersonFactory.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)

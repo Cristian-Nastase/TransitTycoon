@@ -3,10 +3,12 @@
 Person::Person(std::string name,
                std::map<TransportType, float> preferences,
                int mood,
+               int budget,
                std::unique_ptr<ChoiceStrategy> strategy)
     : name(std::move(name)),
       preferences(std::move(preferences)),
       mood(mood),
+      budget(budget),
       boost(0),
       strategy(std::move(strategy)) {}
 
@@ -22,6 +24,6 @@ int Person::chooseTransport(
 
 std::ostream& operator<<(std::ostream& os, const Person& p) {
     os << p.name << " (mood: " << p.getMood()
-       << ", strategy: " << p.strategy->name() << ")";
+            << ", strategy: " << p.strategy->name() << ")";
     return os;
 }

@@ -5,15 +5,17 @@
 #include "../include/core/WeatherSystem.h"
 #include "../include/patterns/IObserver.h"
 #include "../include/patterns/ISubject.h"
+#include "../include/people/PersonFactory.h"
 
 int main() {
-    WeatherSystem we(0.6);
-    auto i = 100;
-    while (i) {
-        std::cout<<WeatherSystem::weatherName(we.getCurrent())<<"\n";
-        we.advance();
-        i--;
+    std::vector<std::shared_ptr<Person>> people;
+    people.reserve(100);
+
+    for (int i = 0; i < 100; ++i) {
+        people.push_back(PersonFactory::createRandom(i));
+        std::cout<<*people[i]<<'\n';
     }
+
     std::cout << "Transport Tycoon - start\n";
     return 0;
 }
