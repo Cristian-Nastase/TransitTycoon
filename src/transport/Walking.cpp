@@ -1,4 +1,4 @@
-#include "../include/transport/Walking.h"
+#include "transport/Walking.h"
 
 Walking::Walking(int capacity, int price)
     : TransportMode("Pe jos", capacity, price), hasUmbrellas(false) {}

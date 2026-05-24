@@ -14,8 +14,7 @@ enum class TransportType {
     Walking
 };
 
-class TransportMode : public IObserver,
-                       public std::enable_shared_from_this<TransportMode> {
+class TransportMode : public IObserver {
 protected:
     std::string name;
     int capacity;

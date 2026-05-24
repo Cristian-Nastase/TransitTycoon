@@ -1,4 +1,4 @@
-#include "../include/transport/Metro.h"
+#include "transport/Metro.h"
 
 Metro::Metro(int capacity, int price)
     : TransportMode("Metrou", capacity, price) {}

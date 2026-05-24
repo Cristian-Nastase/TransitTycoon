@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "../patterns/ISubject.h"
+#include "patterns/ISubject.h"
 
 class WeatherSystem : public ISubject {
     WeatherType current;

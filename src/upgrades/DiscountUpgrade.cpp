@@ -1,6 +1,6 @@
-#include "../include/upgrades/DiscountUpgrade.h"
-#include "../include/transport/TransportMode.h"
-#include "../include/core/Game.h"
+#include "upgrades/DiscountUpgrade.h"
+#include "transport/TransportMode.h"
+#include "core/Game.h"
 
 DiscountUpgrade::DiscountUpgrade(std::string name, int price, float percent)
     : Upgrade(std::move(name), price), discountPercent(percent) {}

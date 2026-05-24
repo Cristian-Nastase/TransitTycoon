@@ -1,11 +1,11 @@
-#include "../include/core/Game.h"
-#include "../include/core/RandomGenerator.h"
-#include "../include/transport/Metro.h"
-#include "../include/transport/Tram.h"
-#include "../include/transport/Bus.h"
-#include "../include/people/PersonFactory.h"
-#include "../include/upgrades/UpgradeFactory.h"
-#include "../include/exceptions/GameExceptions.h"
+#include "core/Game.h"
+#include "core/RandomGenerator.h"
+#include "transport/Metro.h"
+#include "transport/Tram.h"
+#include "transport/Bus.h"
+#include "people/PersonFactory.h"
+#include "upgrades/UpgradeFactory.h"
+#include "exceptions/GameExceptions.h"
 
 Game::Game(const std::string& configFile, const std::string& upgradesFile)
     : pendingBoostCount(0), pendingBoostAmount(0) {
@@ -66,21 +66,21 @@ RoundResult Game::runRound() {
 
     for (auto& t : transports) t->resetLoad();
 
-    Repository<std::shared_ptr<Person>> passengers;
+    currentPassengers.clear();
     for (int i = 0; i < passengersPerRound; ++i) {
         auto p = PersonFactory::createRandom(round * 1000 + i);
         if (pendingBoostCount > 0) {
             p->addBoost(pendingBoostAmount);
             --pendingBoostCount;
         }
-        passengers.add(std::move(p));
+        currentPassengers.add(std::move(p));
     }
 
     int satisfied = 0;
     float happinessSum = 0.0f;
     int revenue = 0;
 
-    passengers.forEach([&](std::shared_ptr<Person>& person) {
+    currentPassengers.forEach([&](std::shared_ptr<Person>& person) {
         int idx = person->chooseTransport(transports);
 
         if (idx >= 0 && idx < static_cast<int>(transports.size())) {

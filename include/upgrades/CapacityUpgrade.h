@@ -4,7 +4,7 @@
 #pragma once
 
 #include "upgrades/Upgrade.h"
-#include "../transport/TransportMode.h"
+#include "transport/TransportMode.h"
 
 class CapacityUpgrade : public Upgrade {
     TransportType target;

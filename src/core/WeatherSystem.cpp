@@ -1,5 +1,5 @@
-#include "../include/core/WeatherSystem.h"
-#include "../include/core/RandomGenerator.h"
+#include "core/WeatherSystem.h"
+#include "core/RandomGenerator.h"
 
 WeatherSystem::WeatherSystem(float changeProbability)
     : current(WeatherType::Sunny), changeProbability(changeProbability) {}

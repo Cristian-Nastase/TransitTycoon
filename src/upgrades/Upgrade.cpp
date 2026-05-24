@@ -1,4 +1,4 @@
-#include "../include/upgrades/Upgrade.h"
+#include "upgrades/Upgrade.h"
 
 Upgrade::Upgrade(std::string name, int price)
     : name(std::move(name)), price(price) {}

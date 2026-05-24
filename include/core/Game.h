@@ -6,11 +6,11 @@
 #include "ConfigLoader.h"
 #include "WeatherSystem.h"
 #include "RoundResult.h"
-#include "../transport/TransportMode.h"
-#include "../transport/Walking.h"
-#include "../people/Person.h"
-#include "../upgrades/Upgrade.h"
-#include "../templates/Repository.h"
+#include "transport/TransportMode.h"
+#include "transport/Walking.h"
+#include "people/Person.h"
+#include "upgrades/Upgrade.h"
+#include "templates/Repository.h"
 
 #include <memory>
 #include <vector>
@@ -24,6 +24,8 @@ class Game {
 
     Repository<std::unique_ptr<Upgrade>> availableUpgrades;
     Repository<RoundResult> history;
+
+    Repository<std::shared_ptr<Person>> currentPassengers;
 
     int money;
     int round;
@@ -65,6 +67,11 @@ public:
     const Repository<RoundResult>& getHistory() const {
         return history;
     }
+
+    const Repository<std::shared_ptr<Person>>& getCurrentPassengers() const {
+        return currentPassengers;
+    }
+
 };
 
 #endif

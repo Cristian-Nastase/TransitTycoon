@@ -1,5 +1,5 @@
-#include "../include/patterns/CheapestStrategy.h"
-#include "../include/people/Person.h"
+#include "patterns/CheapestStrategy.h"
+#include "people/Person.h"
 
 int CheapestStrategy::choose(
     const Person& p,

@@ -1,4 +1,4 @@
-#include "../include/transport/Bus.h"
+#include "transport/Bus.h"
 
 Bus::Bus(int capacity, int price)
     : TransportMode("Autobuz", capacity, price) {}

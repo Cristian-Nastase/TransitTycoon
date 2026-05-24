@@ -6,7 +6,6 @@
 #include <iostream>
 
 void demonstrateTemplates() {
-    // Demonstrăm template-ul cu tipuri diferite (cerință explicită)
     std::cout << "\n--- Demonstratie template Repository ---\n";
 
     Repository<int> nums;

@@ -1,5 +1,5 @@
-#include "../include/upgrades/CapacityUpgrade.h"
-#include "../include/core/Game.h"
+#include "upgrades/CapacityUpgrade.h"
+#include "core/Game.h"
 
 CapacityUpgrade::CapacityUpgrade(std::string name, int price,
                                   TransportType target, int amount)

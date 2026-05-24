@@ -1,6 +1,6 @@
-#include "../../include/ui/ConsoleUI.h"
-#include "../../include/exceptions/GameExceptions.h"
-#include "../../include/templates/Repository.h"
+#include "ui/ConsoleUI.h"
+#include "exceptions/GameExceptions.h"
+#include "templates/Repository.h"
 
 #include <iostream>
 #include <iomanip>
@@ -9,9 +9,10 @@
 ConsoleUI::ConsoleUI(Game& game) : game(game) {}
 
 void ConsoleUI::printHeader() {
-    std::cout << "\n==============================================\n";
-    std::cout << "        TRANSIT TYCOON\n";
-    std::cout << "==============================================\n";
+std::cout<<"    _____________"<<'\n';
+std::cout<<"  _/_|[][][][][] | - -"<<'\n';
+std::cout<<"( Transit Tycoon | - -"<<'\n';
+std::cout<<" =--OO-------OO--=dwb"<<"\n\n";
 }
 
 void ConsoleUI::printStatus() {
@@ -50,9 +51,7 @@ void ConsoleUI::printHistory() {
 }
 
 void ConsoleUI::printPassengers() {
-    for (auto passenger: ) {
-
-    }
+    printRepository(game.getCurrentPassengers(), "Pasagerii rundei curente");
 }
 
 int ConsoleUI::readInt(const std::string& prompt, int min, int max) {
@@ -113,15 +112,17 @@ void ConsoleUI::run() {
         std::cout << "\nMeniu:\n";
         std::cout << "  1. Magazin upgrade-uri\n";
         std::cout << "  2. Continua urmatoarea runda\n";
-        std::cout << "  3. Vezi istoric\n";
-        std::cout << "  4. Iesire\n";
-        int choice = readInt("Alegere: ", 1, 4);
+        std::cout << "  3. Vezi pasagerii\n";
+        std::cout << "  4. Vezi istoric\n";
+        std::cout << "  5. Iesire\n";
+        int choice = readInt("Alegere: ", 1, 5);
 
         switch (choice) {
             case 1: handleUpgradeChoice(); break;
             case 2: break;
-            case 3: printHistory(); break;
-            case 4:
+            case 3: printPassengers(); break;
+            case 4: printHistory(); break;
+            case 5:
                 std::cout << "La revedere!\n";
                 return;
         }

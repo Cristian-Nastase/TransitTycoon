@@ -1,6 +1,6 @@
-#include "../include/upgrades/UmbrellaUpgrade.h"
-#include "../include/core/Game.h"
-#include "../include/transport/Walking.h"
+#include "upgrades/UmbrellaUpgrade.h"
+#include "core/Game.h"
+#include "transport/Walking.h"
 
 UmbrellaUpgrade::UmbrellaUpgrade(std::string name, int price, float bonus)
     : Upgrade(std::move(name), price), effectBonus(bonus) {}

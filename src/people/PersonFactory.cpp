@@ -1,7 +1,7 @@
-#include "../include/people/PersonFactory.h"
-#include "../include/patterns/WeightedRandomStrategy.h"
-#include "../include/patterns/CheapestStrategy.h"
-#include "../include/core/RandomGenerator.h"
+#include "people/PersonFactory.h"
+#include "patterns/WeightedRandomStrategy.h"
+#include "patterns/CheapestStrategy.h"
+#include "core/RandomGenerator.h"
 
 std::shared_ptr<Person> PersonFactory::createStudent(int id) {
     std::map<TransportType, float> prefs = {

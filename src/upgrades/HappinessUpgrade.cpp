@@ -1,5 +1,5 @@
-#include "../include/upgrades/HappinessUpgrade.h"
-#include "../include/core/Game.h"
+#include "upgrades/HappinessUpgrade.h"
+#include "core/Game.h"
 
 HappinessUpgrade::HappinessUpgrade(std::string name, int price, int boost)
     : Upgrade(std::move(name), price), boostAmount(boost) {}

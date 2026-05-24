@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "../core/Game.h"
-#include "../core/WeatherSystem.h"
+#include "core/Game.h"
+#include "core/WeatherSystem.h"
 
 class ConsoleUI {
     Game& game;

@@ -1,9 +1,9 @@
-#include "../include/upgrades/UpgradeFactory.h"
-#include "../include/upgrades/UmbrellaUpgrade.h"
-#include "../include/upgrades/CapacityUpgrade.h"
-#include "../include/upgrades/HappinessUpgrade.h"
-#include "../include/upgrades/DiscountUpgrade.h"
-#include "../include/exceptions/GameExceptions.h"
+#include "upgrades/UpgradeFactory.h"
+#include "upgrades/UmbrellaUpgrade.h"
+#include "upgrades/CapacityUpgrade.h"
+#include "upgrades/HappinessUpgrade.h"
+#include "upgrades/DiscountUpgrade.h"
+#include "exceptions/GameExceptions.h"
 
 #include <fstream>
 #include <sstream>
