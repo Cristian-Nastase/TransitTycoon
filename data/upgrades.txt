@@ -1,0 +1,6 @@
+umbrella|Umbrele gratuite pietoni|100|0.4
+capacity_metro|Vagon extra metrou|150|10
+capacity_tram|Locuri extra tramvai|100|6
+capacity_bus|Locuri extra autobuz|80|4
+happiness|Promo fericire 5 pasageri|80|15
+discount|Reducere generala 20%|120|0.2

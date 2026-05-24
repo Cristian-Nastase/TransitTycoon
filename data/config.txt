@@ -1,0 +1,13 @@
+starting_money=500
+min_happiness=50.0
+passengers_per_round=15
+weather_change_probability=0.6
+metro_capacity=20
+tram_capacity=12
+bus_capacity=8
+walking_capacity=999
+metro_price=5
+tram_price=3
+bus_price=2
+walking_price=0
+revenue_per_happy_passenger=10

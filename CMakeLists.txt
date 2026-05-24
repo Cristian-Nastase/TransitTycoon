@@ -16,6 +16,5 @@ add_executable(TransitTycoon
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
-target_link_libraries(TransitTycoon PRIVATE sfml-graphics sfml-window sfml-system)
 
 file(COPY ${CMAKE_SOURCE_DIR}/data DESTINATION ${CMAKE_BINARY_DIR})
