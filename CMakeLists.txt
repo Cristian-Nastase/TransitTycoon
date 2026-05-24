@@ -22,6 +22,8 @@ add_executable(TransitTycoon
         include/patterns/ISubject.h
         include/core/WeatherSystem.h
         include/core/WeatherSystem.cpp
+        include/transport/TransportMode.h
+        include/transport/TransportMode.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)
