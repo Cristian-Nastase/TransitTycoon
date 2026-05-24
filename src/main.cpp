@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/exceptions/GameExceptions.h"
+#include "../include/core/RandomGenerator.h"
 
 int main() {
     try {

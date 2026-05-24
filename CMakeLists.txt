@@ -14,6 +14,8 @@ find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 add_executable(TransitTycoon
         src/main.cpp
         include/exceptions/GameExceptions.h
+        include/core/RandomGenerator.h
+        include/core/RandomGenerator.cpp
 )
 
 target_include_directories(TransitTycoon PRIVATE include)

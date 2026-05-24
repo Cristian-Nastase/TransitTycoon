@@ -1,6 +1,8 @@
 #ifndef TRANSITTYCOON_GAMEEXCEPTIONS_H
 #define TRANSITTYCOON_GAMEEXCEPTIONS_H
 
+#pragma once
+
 #include <stdexcept>
 #include <string>
 
