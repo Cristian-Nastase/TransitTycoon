@@ -37,7 +37,7 @@ void ConsoleUI::printRoundResult(const RoundResult& r) {
 
 void ConsoleUI::printUpgradeMenu() {
     std::cout << "\n--- Magazin Upgrade-uri (bani: " << game.getMoney() << ") ---\n";
-    std::cout << "  0. Sari peste runda asta\n";
+    std::cout << "  0. Inapoi\n";
 
     std::size_t i = 1;
     game.getUpgrades().forEach([&](const std::unique_ptr<Upgrade>& u) {
@@ -73,7 +73,6 @@ bool ConsoleUI::handleUpgradeChoice() {
     int choice = readInt("Alegere (0-" + std::to_string(max) + "): ", 0, max);
 
     if (choice == 0) {
-        std::cout << "Sari peste runda.\n";
         return true;
     }
 
@@ -91,8 +90,7 @@ bool ConsoleUI::handleUpgradeChoice() {
 void ConsoleUI::run() {
     printHeader();
     std::cout << "Pragul minim de fericire este "
-              << game.getMinHappiness() << "%. Sub el, ai pierdut.\n";
-
+     << game.getMinHappiness() << "%. Sub el, ai pierdut.\n";
     while (true) {
         printStatus();
 
@@ -110,21 +108,31 @@ void ConsoleUI::run() {
         }
 
         std::cout << "\nMeniu:\n";
-        std::cout << "  1. Magazin upgrade-uri\n";
-        std::cout << "  2. Continua urmatoarea runda\n";
+        std::cout << "  1. Continua urmatoarea runda\n";
+        std::cout << "  2. Magazin upgrade-uri\n";
         std::cout << "  3. Vezi pasagerii\n";
         std::cout << "  4. Vezi istoric\n";
         std::cout << "  5. Iesire\n";
         int choice = readInt("Alegere: ", 1, 5);
 
-        switch (choice) {
-            case 1: handleUpgradeChoice(); break;
-            case 2: break;
-            case 3: printPassengers(); break;
-            case 4: printHistory(); break;
-            case 5:
-                std::cout << "La revedere!\n";
-                return;
+        while (choice != 1) {
+            switch (choice) {
+                case 2: handleUpgradeChoice(); break;
+                case 3: printPassengers(); break;
+                case 4: printHistory(); break;
+                case 5:
+                    std::cout << "La revedere!\n";
+                    return;
+            }
+
+            std::cout << "\nMeniu:\n";
+            std::cout << "  1. Continua urmatoarea runda\n";
+            std::cout << "  2. Magazin upgrade-uri\n";
+            std::cout << "  3. Vezi pasagerii\n";
+            std::cout << "  4. Vezi istoric\n";
+            std::cout << "  5. Iesire\n";
+
+            choice = readInt("Alegere: ", 1, 5);
         }
     }
 }

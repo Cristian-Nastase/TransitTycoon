@@ -77,13 +77,4 @@ void printRepository(const Repository<std::shared_ptr<T>>& repo,
     });
 }
 
-template <typename T, typename Pred>
-std::size_t countMatching(const Repository<T>& repo, Pred predicate) {
-    std::size_t count = 0;
-    repo.forEach([&](const T& item) {
-        if (predicate(item)) ++count;
-    });
-    return count;
-}
-
 #endif

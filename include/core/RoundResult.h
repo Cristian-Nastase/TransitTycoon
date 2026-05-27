@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <ostream>
+#include <iostream>
 
 struct RoundResult {
     int roundNumber;

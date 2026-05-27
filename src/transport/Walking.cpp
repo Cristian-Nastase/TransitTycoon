@@ -10,7 +10,7 @@ void Walking::onWeatherChanged(WeatherType w) {
             weatherMultiplier = 1.2f;  // e frumos afara = bonus
             break;
         case WeatherType::Cloudy:
-            weatherMultiplier = 1.0f;
+            weatherMultiplier = 0.8f;
             break;
         case WeatherType::Rainy:
             weatherMultiplier = hasUmbrellas ? 0.7f : 0.2f;

@@ -5,29 +5,9 @@
 
 #include <iostream>
 
-void demonstrateTemplates() {
-    std::cout << "\n--- Demonstratie template Repository ---\n";
-
-    Repository<int> nums;
-    nums.add(10);
-    nums.add(20);
-    nums.add(30);
-    printRepository(nums, "Numere");
-
-    Repository<std::string> words;
-    words.add("hello");
-    words.add("world");
-    printRepository(words, "Cuvinte");
-
-    auto evens = countMatching(nums, [](int n) { return n % 2 == 0; });
-    std::cout << "Pare in lista numere: " << evens << "\n\n";
-}
-
 int main() {
     try {
-        demonstrateTemplates();
-
-        Game game("data/config.txt", "data/upgrades.txt");
+        Game game("../data/config.txt", "../data/upgrades.txt");
         ConsoleUI ui(game);
         ui.run();
 
